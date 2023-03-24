@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+:root {
+    --primary: rgb(237, 9, 9);
+    --secondary: rgb(226, 86, 86);
+    --third: black;
+    --fourth: white;
+}
+
+header {
+    background-color: var(--primary);
+    border-bottom: solid var(--third) 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 12px;
+}
+
+
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    height: 100%;
+}
+
+header ul.logo li {
+    height: 100%;
+}
+
+header ul.logo li img {
+    height: 100%;
+}
+
+header ul.icons img {
+    width: 3.5rem;
+}
+
+header ul.logo h1 {
+    font-size: 2rem;
+
+}
+
+header input {
+    width: 600px;
+    height: 40px;
+    border-radius: 25px;
+    border: solid  2px;
+    background-color: var(--secondary);
+}
+
+main {
+    
+    height: 1fr;
+    display: grid;
+    grid-template-rows: 500px 1fr;
+}
+
+main div{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/img/bg.png);
+    background-attachment: fixed;
+}
+
+main ul {
+    list-style: none;
+}
+
+main div2 {
+    grid-template-columns: auto auto auto auto;
+    border-top: solid var(--third) 8px;
+    background-color: var(--fourth);
+}
+
+main div2 h1 {
+    background-color: var(--primary);
+    width: 11rem;
+    height: 2.7rem;
+    padding-left: 0.5rem;
+    border-bottom-right-radius: 0.5rem ;
+    border-bottom: solid var(--third) 0.2rem;
+    border-right: solid var(--third) 0.2rem;
+}
+
+main div2 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px;
+}
+
+main div2 img {
+    width: 20rem;
+    align-items: center;
+}
+
+main div2 ul li article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div2 ul li article img{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/img/bg.png);
+
+}
+
+
+footer {
+    background-color: var(--primary);
+    border-top: solid var(--third) 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 12px;
+}
+
+footer img {
+    width: 3.5rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+
+
+@media (max-width: 1010px){
+    main > div2{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 768px){
+    main > div2{
+        grid-template-columns: auto auto;
+    }
+}
