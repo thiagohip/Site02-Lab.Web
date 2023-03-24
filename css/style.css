@@ -49,7 +49,7 @@ header ul.icons img {
 
 header ul.logo h1 {
     font-size: 2rem;
-
+    padding-top: 8px;
 }
 
 header input {
@@ -79,7 +79,7 @@ main ul {
 }
 
 main div2 {
-    grid-template-columns: auto auto auto auto;
+    
     border-top: solid var(--third) 8px;
     background-color: var(--fourth);
 }
@@ -95,14 +95,15 @@ main div2 h1 {
 }
 
 main div2 ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
-    justify-content: space-between;
-    padding: 150px;
+    padding: 100px;
+    gap: 20px;
 }
 
 main div2 img {
-    width: 20rem;
+    width: 300px;
     align-items: center;
 }
 
@@ -110,14 +111,15 @@ main div2 ul li article{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-main div2 ul li article img{
-    background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url(/img/bg.png);
-
+    background-image: url(/img/cardbg.png);
+    background-size: 10rem;
+    
+    border: solid black 7px;
+    border-radius: 15px;
+    background-attachment: fixed;
 }
+
 
 
 footer {
@@ -145,12 +147,12 @@ footer ul {
 
 @media (max-width: 1010px){
     main > div2{
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
     }
 }
 
 @media (max-width: 768px){
     main > div2{
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
     }
 }
