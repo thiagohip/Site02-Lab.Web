@@ -106,8 +106,8 @@ main div2 h1 {
 }
 
 main div2 ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
     gap: 20px;
 
@@ -161,9 +161,5 @@ footer ul {
 @media (max-width: 720px) {
     main div2 ul {
         grid-template-columns: auto;
-    }
-
-    header ul.icons li#some {
-        display: none
     }
 }
