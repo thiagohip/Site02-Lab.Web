@@ -110,8 +110,8 @@ header input {
 }
 
 .main div2 ul {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 
 }
@@ -154,8 +154,12 @@ footer ul {
 }
 
 .carrinho{
-    height: 1fr;
+    height: 100vh;
     width: var(--width);
+    background-color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -164,6 +168,7 @@ footer ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .carrinho div ul.itens{
@@ -171,35 +176,42 @@ footer ul {
     height: 200px;
     border: solid black;
     border-radius: 15px;
+    align-items: center;
 }
 
-.carrinho div ul li{
+.carrinho .cent {
+    height: 100%;
+    list-style-type: none;
+    padding-top: 30px;
+}
+
+.carrinho .iten{
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 }
 
-.carrinho div ul li ul li ul{
-    
-    display: flex;
-    gap: 15px;
+.iten img{
+    height: 100%
 }
+
+
+.carrinho li.selec{
+    height: 20%;
+    padding-top: 15px;
+}
+
 
 .carrinho div2{
-    height: 10vh;
-    border-top: solid black 2px;
+    height: 20px;
+    width: 80vw;
+    border-top: solid black;
+    display: flex;
+    justify-content: flex-end;
 }
 
-
-
-@media (max-width: 1024px) {
-    main div2 ul {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media (max-width: 720px) {
-    main div2 ul {
-        grid-template-columns: auto;
-    }
+.carrinho div2 h1{
+    padding-top: 10px;
 }
